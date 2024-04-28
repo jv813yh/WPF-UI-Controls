@@ -10,14 +10,19 @@
 
   <ItemGroup>
     <None Remove="Images\windowsImage.JPG" />
+    <None Remove="Windows\BackgroundCustomDropDown.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DropdownMenu\DropdownMenu.csproj" />
     <ProjectReference Include="..\NavigationDrawerMenu\NavigationDrawerMenu.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\windowsImage.JPG">
+    <Resource Include="Images\WindowsImage.JPG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\BackgroundCustomDropDown.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

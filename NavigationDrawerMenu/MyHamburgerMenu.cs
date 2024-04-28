@@ -37,6 +37,7 @@ namespace NavigationDrawerMenu
             DefaultStyleKeyProperty.OverrideMetadata(typeof(MyHamburgerMenu), new FrameworkPropertyMetadata(typeof(MyHamburgerMenu)));
         }
 
+        // This method is called when the IsOpen property is changed
         private static void OnIsOpenPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             if (d is MyHamburgerMenu hamburgerMenu)
@@ -45,6 +46,7 @@ namespace NavigationDrawerMenu
             }
         }
 
+        // According to the value of the IsOpen property, the menu is opened or closed, then the animation is started
         private void OnIsOpenPropertyChanged()
         {
             if(IsOpen)
@@ -57,12 +59,14 @@ namespace NavigationDrawerMenu
             }
         }
 
+        // Animation for closing the menu
         private void CloseMenuAnimnation()
         {
             DoubleAnimation closeAnimation = new DoubleAnimation(0, OpenCloseDuration);
             BeginAnimation(WidthProperty, closeAnimation);
         }
 
+        // Animation for opening the menu
         private void OpenMenuAnimation()
         {
             double contentWidth = MeasureContentWidth();
@@ -71,6 +75,7 @@ namespace NavigationDrawerMenu
             BeginAnimation(WidthProperty, openAnimation);
         }
 
+        // Measure the width of the menu content
         private double MeasureContentWidth()
         {
             MenuContent.Measure(new Size(MaxWidth, MaxHeight));

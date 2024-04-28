@@ -5,7 +5,9 @@ VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NavigationDrawerMenu", "NavigationDrawerMenu\NavigationDrawerMenu.csproj", "{009413B8-8BCE-4A3D-95E4-23BA56F377E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIWPFDemo", "UIWPFDemo\UIWPFDemo.csproj", "{CAC50D9F-E1B6-4376-8E27-2640C1CF88E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIWPFDemo", "UIWPFDemo\UIWPFDemo.csproj", "{CAC50D9F-E1B6-4376-8E27-2640C1CF88E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropdownMenu", "DropdownMenu\DropdownMenu.csproj", "{BB1141AD-36CD-4144-9A1F-F51335DFC727}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{CAC50D9F-E1B6-4376-8E27-2640C1CF88E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAC50D9F-E1B6-4376-8E27-2640C1CF88E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAC50D9F-E1B6-4376-8E27-2640C1CF88E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB1141AD-36CD-4144-9A1F-F51335DFC727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB1141AD-36CD-4144-9A1F-F51335DFC727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB1141AD-36CD-4144-9A1F-F51335DFC727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB1141AD-36CD-4144-9A1F-F51335DFC727}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

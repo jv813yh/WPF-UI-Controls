@@ -2,16 +2,25 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:NavigationDrawerMenu">
 
+    <!--
+        Defined style for MyHamburgerMenu and for MyHambrugerMenuItem
+    -->
     <Style TargetType="{x:Type local:MyHamburgerMenu}">
         <Setter Property="Template">
             <Setter.Value>
                 
                 <ControlTemplate TargetType="{x:Type local:MyHamburgerMenu}">
                     
+                    <!--
+                        I use Border to wrap the content of the MyHamburgerMenu
+                    -->
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
 
+                        <!--
+                            Set the content of the MyHamburgerMenu to the MenuContent property
+                        -->
                         <ContentControl Content="{TemplateBinding MenuContent}"/>
                     </Border>
                 </ControlTemplate>
@@ -30,6 +39,9 @@
                             BorderThickness="{TemplateBinding BorderThickness}"
                             Padding="{TemplateBinding Padding}">
                         
+                        <!--
+                            I use ContentPresenter to display the content of the MyHamburgerMenuItem, set in .xaml file
+                        -->
                         <ContentPresenter/>
                     </Border>
                 </ControlTemplate>

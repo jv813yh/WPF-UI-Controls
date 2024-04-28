@@ -121,7 +121,8 @@
                     </Style>
                 </nvgmenu:MyHamburgerMenu.Resources>
                 <nvgmenu:MyHamburgerMenu.MenuContent>
-                    <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Vertical"
+                                Margin="5">
                         <nvgmenu:MyHamburgerMenuItem>
                             <TextBlock Text="Introduction"
                                        ToolTip="Brief description ..."/>
@@ -144,7 +145,7 @@
 
             <Image
                 Grid.Column="1"
-                Source="/Images/windowsImage.jpg"
+                Source="/Images/WindowsImage.jpg"
                 Stretch="UniformToFill"/>
 
         </Grid>
