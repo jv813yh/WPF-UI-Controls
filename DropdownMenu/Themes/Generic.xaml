@@ -43,7 +43,6 @@
                             
                             <ContentControl Content="{TemplateBinding Content}"/>
                         </Popup>
-                        
 
                     </Grid>
 

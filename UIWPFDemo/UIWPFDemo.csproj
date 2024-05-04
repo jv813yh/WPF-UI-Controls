@@ -16,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DropdownMenu\DropdownMenu.csproj" />
     <ProjectReference Include="..\NavigationDrawerMenu\NavigationDrawerMenu.csproj" />
+    <ProjectReference Include="..\PlaceHolderTextBox\PlaceHolderTextBox.csproj" />
   </ItemGroup>
 
   <ItemGroup>

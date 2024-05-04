@@ -18,8 +18,12 @@ namespace UIWPFDemo
             //hamWindow.Show();
 
             // For CustomDropDownMenuDemoWindow to work, you need to use the following lines
-            CustomDropDownMenuDemoWindow customDropDownMenuDemoWindow = new CustomDropDownMenuDemoWindow();
-            customDropDownMenuDemoWindow.Show();
+            //CustomDropDownMenuDemoWindow customDropDownMenuDemoWindow = new CustomDropDownMenuDemoWindow();
+            //customDropDownMenuDemoWindow.Show();
+
+            // For PalceHolderTextBoxDemoWindow to work, you need to use the following lines
+            PlaceHolderTextBoxDemoWindow placeHolderTextBoxWindow = new PlaceHolderTextBoxDemoWindow();
+            placeHolderTextBoxWindow.Show();
         }
     }
 }

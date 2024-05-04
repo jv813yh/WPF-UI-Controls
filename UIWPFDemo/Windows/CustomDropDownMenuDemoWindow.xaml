@@ -35,6 +35,27 @@
                     ShadowDepth="5"
                     Opacity="0.7" />
             </TextBlock.Effect>
+            <TextBlock.TextDecorations>
+                <TextDecorationCollection>
+                    <TextDecoration Location="Underline" PenOffset="2" PenOffsetUnit="Pixel" />
+                </TextDecorationCollection>
+            </TextBlock.TextDecorations>
+
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation 
+                                From="#bae4e5"
+                                To="Black"
+                                Duration="0:0:4"
+                                AutoReverse="True"
+                                RepeatBehavior="Forever"
+                                Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
         </TextBlock>
 
         <ListView
@@ -57,7 +78,6 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="auto" />
-                                <ColumnDefinition Width="auto" />
                             </Grid.ColumnDefinitions>
 
                             <TextBlock
@@ -66,8 +86,15 @@
                                 Margin="10,0,0,0"
                                 Text="{Binding}" />
 
+                            <!--
+                                My customDropDownMenu control
+                            -->
                             <drpDMenu:CustomDropDownMenu Grid.Column="1"
                                                          Margin="0,0,10,0">
+                                
+                                <!--
+                                    Resources to style the buttons in the control
+                                -->
                                 <drpDMenu:CustomDropDownMenu.Resources>
                                     <Style TargetType="Button">
                                         <Setter Property="Background" Value="White"/>
@@ -76,6 +103,10 @@
                                         <Setter Property="BorderThickness" Value="0"/>
                                         <Setter Property="Template">
                                             <Setter.Value>
+                                                
+                                                <!--
+                                                    I have to use a ControlTemplate to be able to animate the background color of the button
+                                                -->
                                                 <ControlTemplate TargetType="Button">
                                                     <Border Padding="{TemplateBinding Padding}"
                                                             Background="{TemplateBinding Background}"
@@ -87,6 +118,9 @@
                                             </Setter.Value>
                                         </Setter>
 
+                                        <!--
+                                            Triggers to animate the background color of the button when the mouse is over it
+                                        -->
                                         <Style.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
                                                 <Trigger.EnterActions>
@@ -113,13 +147,23 @@
                                         </Style.Triggers>
 
                                     </Style>
+                                    
+
                                 </drpDMenu:CustomDropDownMenu.Resources>
-                                <StackPanel>
-                                    <Button Content="Edit"
+
+                                <!--
+                                    Control in border with 2 buttons   
+                                -->
+                                <Border Background="White"
+                                        BorderBrush="LightGray"
+                                        BorderThickness="1">
+                                    <StackPanel>
+                                        <Button Content="Edit"
                                             Click="OnEditClick"/>
-                                    <Button Content="Delete"
+                                        <Button Content="Delete"
                                             Click="OnDeleteClick"/>
-                                </StackPanel>
+                                    </StackPanel>
+                                </Border>
                             </drpDMenu:CustomDropDownMenu>
 
                         </Grid>
